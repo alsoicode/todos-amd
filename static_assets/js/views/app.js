@@ -12,7 +12,8 @@ function(Backbone, _, $, TodosCollection, TodoView) {
         events: {
             'keypress #new-todo': 'createOnEnter',
             'click #clear-completed': 'clearCompleted',
-            'click #toggle-all': 'toggleAllComplete'
+            'click #toggle-all': 'toggleAllComplete',
+            'click #about-link': 'showAbout'
         },
 
         initialize: function() {

@@ -26,8 +26,9 @@
             Double-click to edit a todo.
         </div>
         <div id="credits">
-            Rewritten by: Brandon Taylor.
+            Rewritten by: <a id="about-link" href="#">Brandon Taylor</a>.
         </div>
+        <div id="about"></div>
         <script>
             var require = {
                 baseUrl: '/static/js',
@@ -36,15 +37,11 @@
                     'json2': '{% static "js/lib/json2" %}',
                     'underscore': '{% static "js/lib/underscore" %}',
                     'backbone': '{% static "js/lib/backbone" %}'
-                    // 'backboneLocalStorage': '{% static "js/lib/backbone.localStorage" %}'
                 },
                 shim: {
                     'backbone': {
                         deps: ['jquery', 'underscore']
                     }
-                    // 'backboneLocalStorage': {
-                    //     deps: ['jquery', 'backbone']
-                    // }
                 },
                 enforceDefine: true
             };

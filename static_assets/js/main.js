@@ -1,8 +1,9 @@
-define(['views/app'], function(AppView) {
+define(['backbone', 'routers/router'], function(Backbone, Router) {
 
-    // Initialize app view when DOM is ready
     $(document).ready(function($) {
-        var App = new AppView();
+        var router = new Router();
+
+        Backbone.history.start();
     });
 
 });
