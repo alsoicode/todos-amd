@@ -26,7 +26,7 @@ function(Backbone, _, $, TodosCollection, TodoView) {
             this.footer = this.$('footer');
             this.main = $('#main');
 
-            TodoList.fetch();
+            TodoList.reset(initialTodos);
         },
 
         render: function() {

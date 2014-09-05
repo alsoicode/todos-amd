@@ -47,7 +47,9 @@
                     // }
                 },
                 enforceDefine: true
-            }
+            };
+
+            var initialTodos = {{ todos|safe }};
         </script>
         <script src="{% static 'js/lib/require.js' %}" data-main="{% static 'js/main.js' %}"></script>
 
