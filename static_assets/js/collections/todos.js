@@ -1,8 +1,9 @@
-define(['backbone', 'models/todo', 'backboneLocalStorage'], function(Backbone, TodoModel) {
+define(['backbone', 'models/todo'], function(Backbone, TodoModel) {
     var TodosCollection = Backbone.Collection.extend({
         model: TodoModel,
+        url: '/api/v1/todo/',
 
-        localStorage: new Backbone.LocalStorage('todos-backbone-amd'),
+        // localStorage: new Backbone.LocalStorage('todos-backbone-amd'),
 
         done: function() {
             return this.where({done: true});
@@ -17,6 +18,10 @@ define(['backbone', 'models/todo', 'backboneLocalStorage'], function(Backbone, T
                 return 1;
             }
             return this.last().get('order') + 1;
+        },
+
+        parse: function(response) {
+            return response.objects;
         },
 
         comparator: 'order'

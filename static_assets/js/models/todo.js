@@ -13,6 +13,14 @@ define(['backbone'], function(Backbone) {
             this.save({
                 done: !this.get('done')
             });
+        },
+
+        url: function() {
+            var id = this.id || '';
+            if (id !== '') {
+                id += '/';
+            }
+            return '/api/v1/todo/' + id;
         }
     });
 

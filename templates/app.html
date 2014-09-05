@@ -28,11 +28,6 @@
         <div id="credits">
             Rewritten by: Brandon Taylor.
         </div>
-        <!--script src="json2.js"></script>
-        <script src="../../test/vendor/jquery.js"></script>
-        <script src="../../test/vendor/underscore.js"></script>
-        <script src="../../backbone.js"></script>
-        <script src="../backbone.localStorage.js"></script-->
         <script>
             var require = {
                 baseUrl: '/static/js',
@@ -40,16 +35,16 @@
                     'jquery': '{% static "js/lib/jquery" %}',
                     'json2': '{% static "js/lib/json2" %}',
                     'underscore': '{% static "js/lib/underscore" %}',
-                    'backbone': '{% static "js/lib/backbone" %}',
-                    'backboneLocalStorage': '{% static "js/lib/backbone.localStorage" %}'
+                    'backbone': '{% static "js/lib/backbone" %}'
+                    // 'backboneLocalStorage': '{% static "js/lib/backbone.localStorage" %}'
                 },
                 shim: {
                     'backbone': {
                         deps: ['jquery', 'underscore']
-                    },
-                    'backboneLocalStorage': {
-                        deps: ['jquery', 'backbone']
                     }
+                    // 'backboneLocalStorage': {
+                    //     deps: ['jquery', 'backbone']
+                    // }
                 },
                 enforceDefine: true
             }
